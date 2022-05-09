@@ -12,6 +12,5 @@ module.exports = {
   },
   testTimeout: 60000,
   preset: 'ts-jest',
-  testEnvironment: 'node',
   testPathIgnorePatterns: ['<rootDir>/config.*.js'],
 };

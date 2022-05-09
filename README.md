@@ -8,6 +8,7 @@ yarn add zip-postal-codes
 
 # build
 
+yarn build
 yarn install
 
 # test

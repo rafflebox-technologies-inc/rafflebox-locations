@@ -1,5 +1,5 @@
 interface ZipCode {
-  [province: string]: string[];
+  [province: string]: string[] | string;
 };
 
 const range = (min: number, max: number): string[] => [... new Array(max - min + 1).keys()].map((i) => String(i + min));
