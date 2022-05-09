@@ -1,5 +1,8 @@
+interface ZipCode {
+  [province: string]: string[];
+};
 
-const range = (min: number, max: number) => [...Array(max - min + 1).keys()].map(i => String(i + min))
+const range = (min: number, max: number): string[] => [... new Array(max - min + 1).keys()].map((i) => String(i + min));
 
 const al = range(35004, 36925); // alabama
 const ak = range(99501, 99950); // alaska
@@ -7,7 +10,7 @@ const az = range(85001, 86556); // arizona
 const ar = range(71601, 72959); // arkansas
 const ca = range(90001, 96162); // california
 const co = range(80001, 81658); // colorado
-const ct = range(6001, 6928);  // connecticut
+const ct = range(6001, 6928); // connecticut
 const de = range(19701, 19980); // delaware
 const fl = range(32003, 34997); // florida
 const ga = range(30002, 39901); // georgia
@@ -52,8 +55,7 @@ const wv = range(24701, 26886); // west virginia
 const wi = range(53001, 54990); // wisconsin
 const wy = range(82001, 83414); // wyoming
 
-
-const zipCodes: any = {
+const zipCodes: ZipCode = {
   'al': al,
   'ak': ak,
   'az': az,
@@ -154,15 +156,16 @@ const zipCodes: any = {
   'west virginia': wv,
   'wisconsin': wi,
   'wyoming': wy,
-}
+};
 
-const validateUsZipCodes = (province: string, zip: string | number): boolean  => {
+const usPostalCodes = (province: string, zip: string | number): boolean => {
   const prefix = zipCodes[province.toLowerCase()];
-      if (prefix.includes(String(zip))) {
-        return true
-      }
-      else {
-        return false
-      }
-}
-export default validateUsZipCodes;
+
+  if (prefix.includes(String(zip))) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+export default usPostalCodes;

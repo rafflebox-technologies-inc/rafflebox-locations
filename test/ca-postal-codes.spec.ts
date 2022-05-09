@@ -1,9 +1,7 @@
 import validateCaPostalCodes from '../src/ca-postal-codes';
 
 describe('canada postal codes', () => {
-
   describe('AB', () => {
-
     it('valid postal code', () => {
       expect(validateCaPostalCodes('Alberta', 'T')).toBe(true);
       expect(validateCaPostalCodes('ab', 't')).toBe(true);
@@ -15,7 +13,6 @@ describe('canada postal codes', () => {
   });
 
   describe('BC', () => {
-
     it('valid postal code', () => {
       expect(validateCaPostalCodes('British Columbia', 'V')).toBe(true);
       expect(validateCaPostalCodes('bc', 'v')).toBe(true);
@@ -27,7 +24,6 @@ describe('canada postal codes', () => {
   });
 
   describe('MB', () => {
-
     it('valid postal code', () => {
       expect(validateCaPostalCodes('Manitoba', 'R')).toBe(true);
       expect(validateCaPostalCodes('mb', 'r')).toBe(true);
@@ -39,7 +35,6 @@ describe('canada postal codes', () => {
   });
 
   describe('NB', () => {
-
     it('valid postal code', () => {
       expect(validateCaPostalCodes('New Brunswick', 'E')).toBe(true);
       expect(validateCaPostalCodes('nb', 'e')).toBe(true);
@@ -51,7 +46,6 @@ describe('canada postal codes', () => {
   });
 
   describe('NL', () => {
-
     it('valid postal code', () => {
       expect(validateCaPostalCodes('Newfoundland', 'A')).toBe(true);
       expect(validateCaPostalCodes('nl', 'a')).toBe(true);
@@ -63,7 +57,6 @@ describe('canada postal codes', () => {
   });
 
   describe('NS', () => {
-
     it('valid postal code', () => {
       expect(validateCaPostalCodes('Nova Scotia', 'B')).toBe(true);
       expect(validateCaPostalCodes('ns', 'b')).toBe(true);
@@ -75,7 +68,6 @@ describe('canada postal codes', () => {
   });
 
   describe('NT', () => {
-
     it('valid postal code', () => {
       expect(validateCaPostalCodes('Northwest Territories', 'X')).toBe(true);
       expect(validateCaPostalCodes('nt', 'x')).toBe(true);
@@ -86,7 +78,6 @@ describe('canada postal codes', () => {
     });
   });
   describe('NU', () => {
-
     it('valid postal code', () => {
       expect(validateCaPostalCodes('Nunavut', 'X')).toBe(true);
       expect(validateCaPostalCodes('nu', 'x')).toBe(true);
@@ -98,7 +89,6 @@ describe('canada postal codes', () => {
   });
 
   describe('ON', () => {
-
     it('valid postal code', () => {
       expect(validateCaPostalCodes('Ontario', 'K')).toBe(true);
       expect(validateCaPostalCodes('on', 'k')).toBe(true);
@@ -114,7 +104,6 @@ describe('canada postal codes', () => {
   });
 
   describe('QC', () => {
-
     it('valid postal code', () => {
       expect(validateCaPostalCodes('Quebec', 'G')).toBe(true);
       expect(validateCaPostalCodes('qc', 'g')).toBe(true);
@@ -129,7 +118,6 @@ describe('canada postal codes', () => {
   });
 
   describe('YT', () => {
-
     it('valid postal code', () => {
       expect(validateCaPostalCodes('Yukon', 'Y')).toBe(true);
       expect(validateCaPostalCodes('yt', 'y')).toBe(true);
@@ -140,7 +128,6 @@ describe('canada postal codes', () => {
     });
   });
   describe('PE', () => {
-
     it('valid postal code', () => {
       expect(validateCaPostalCodes('Prince Edward Island', 'C')).toBe(true);
       expect(validateCaPostalCodes('pe', 'c')).toBe(true);
