@@ -41,7 +41,7 @@ const postalCodes: any = {
   'prince edward island': pe
 }
 
-const validate = (province: string, postal: string): boolean => {
+const validateCaPostalCodes = (province: string, postal: string): boolean => {
   const prefix = postalCodes[province.toLowerCase()];
   if (prefix) {
     if (typeof(prefix) === 'string') {
@@ -63,4 +63,4 @@ const validate = (province: string, postal: string): boolean => {
   }
   return false
 }
-export default validate;
+export default validateCaPostalCodes;
