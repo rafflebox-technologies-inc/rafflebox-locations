@@ -4,7 +4,7 @@
   "main": "index.js",
   "description": "Validate zip codes for US and Canada",
   "repository": "git@github.com:rafflebox-technologies-inc/zip-postal-codes.git",
-  "author": "Basharfrancis <bashar.francis@rafflebox.ca>",
+  "author": "Rafflebox Technologies Inc",
   "license": "ISC",
   "private": false,
   "engines": {
