@@ -1,6 +1,6 @@
 {
   "name": "zip-postal-codes",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "lib/index",
   "types": "lib/index.d.ts",
   "description": "Library for validating Canadian Postal Codes and US Zip Codes",
