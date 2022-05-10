@@ -1,4 +1,4 @@
-import validatePostal from '../src/ca-postal-codes';
+import { validatePostal } from '../src/zip-postal-codes';
 
 describe('canada postal codes', () => {
   describe('AB', () => {

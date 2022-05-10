@@ -1,4 +1,4 @@
-import validateZip from '../src/us-zip-codes';
+import { validateZip } from '../src/zip-postal-codes';
 
 describe('USA postal code', () => {
   describe('AL', () => {

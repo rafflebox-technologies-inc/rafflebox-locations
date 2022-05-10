@@ -11,12 +11,14 @@
     "noImplicitAny": true,
     "moduleResolution": "node",
     "inlineSourceMap": true,
-    "outDir": "build",
+    "outDir": "./lib",
     "baseUrl": ".",
     "typeRoots": ["src/types", "node_modules/@types"],
+    "declaration": true,
     "paths": {
       "*": ["node_modules/*"]
     }
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "**/__tests__/*"]
 }

@@ -1,11 +1,15 @@
 {
   "name": "zip-postal-codes",
   "version": "1.1.0",
-  "main": "index.js",
+  "main": "lib/index",
+  "types": "lib/index.d.ts",
   "description": "Library for validating Canadian Postal Codes and US Zip Codes",
   "repository": "git@github.com:rafflebox-technologies-inc/zip-postal-codes.git",
   "author": "Rafflebox Technologies Inc",
   "license": "ISC",
+  "files": [
+    "lib/**/*"
+  ],
   "private": false,
   "engines": {
     "node": "^14 || ^16"
@@ -17,21 +21,6 @@
     "format": "prettier --write \"**/*.{ts,js,json,md}\"",
     "format:check": "prettier --debug-check \"**/*.{ts,js,json,md}\""
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && yarn test"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,js}": [
-      "eslint --max-warnings 100",
-      "git add"
-    ],
-    "*.{ts,js,json,md,yml}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "devDependencies": {
     "@types/jest": "^27.5.0",
     "eslint": "^7.0.0",
@@ -39,7 +28,7 @@
     "husky": "~8.0.1",
     "jest": "~28.1.0",
     "lint-staged": "~12.4.1",
-    "prettier": "~2.6.2",
+    "prettier": "^2.6.2",
     "ts-jest": "~28.0.2",
     "ts-node": "~10.7.0",
     "typescript": "~4.6.4"
