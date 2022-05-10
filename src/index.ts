@@ -1,4 +1,4 @@
-import isValidateCaPostalCodes from './ca-postal-codes';
-import isValidateUsPostalCodes from './us-zip-codes';
+import validatePostal from './ca-postal-codes';
+import validateZip from './us-zip-codes';
 
-export { isValidateCaPostalCodes, isValidateUsPostalCodes };
+export { validatePostal, validateZip };
