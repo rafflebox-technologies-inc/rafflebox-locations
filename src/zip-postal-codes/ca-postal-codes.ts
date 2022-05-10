@@ -1,6 +1,6 @@
 interface PostalCode {
   [province: string]: string | string[];
-};
+}
 
 const ab = 'T';
 const bc = 'V';
@@ -17,35 +17,35 @@ const yt = 'Y';
 const pe = 'C';
 
 const postalCodes: PostalCode = {
-  'ab': ab,
-  'bc': bc,
-  'mb': mb,
-  'nb': nb,
-  'nl': nl,
-  'ns': ns,
-  'nt': nt,
-  'nu': nu,
-  'on': on,
-  'qc': qc,
-  'sk': sk,
-  'yt': yt,
-  'pe': pe,
-  'alberta': ab,
+  ab: ab,
+  bc: bc,
+  mb: mb,
+  nb: nb,
+  nl: nl,
+  ns: ns,
+  nt: nt,
+  nu: nu,
+  on: on,
+  qc: qc,
+  sk: sk,
+  yt: yt,
+  pe: pe,
+  alberta: ab,
   'british columbia': bc,
-  'manitoba': mb,
+  manitoba: mb,
   'new brunswick': nb,
-  'newfoundland': nl,
+  newfoundland: nl,
   'nova scotia': ns,
   'northwest territories': nt,
-  'nunavut': nu,
-  'ontario': on,
-  'quebec': qc,
-  'saskatchewan': sk,
-  'yukon': yt,
+  nunavut: nu,
+  ontario: on,
+  quebec: qc,
+  saskatchewan: sk,
+  yukon: yt,
   'prince edward island': pe,
 };
 
-const caPostalCodes = (province: string, postal: string): boolean => {
+const validatePostal = (province: string, postal: string): boolean => {
   const prefix = postalCodes[province.toLowerCase()];
 
   if (prefix) {
@@ -71,4 +71,4 @@ const caPostalCodes = (province: string, postal: string): boolean => {
   return false;
 };
 
-export default caPostalCodes;
+export default validatePostal;

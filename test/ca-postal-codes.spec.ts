@@ -1,140 +1,140 @@
-import validateCaPostalCodes from '../src/ca-postal-codes';
+import { validatePostal } from '../src/zip-postal-codes';
 
 describe('canada postal codes', () => {
   describe('AB', () => {
     it('valid postal code', () => {
-      expect(validateCaPostalCodes('Alberta', 'T')).toBe(true);
-      expect(validateCaPostalCodes('ab', 't')).toBe(true);
-      expect(validateCaPostalCodes('AB', 'T')).toBe(true);
+      expect(validatePostal('Alberta', 'T')).toBe(true);
+      expect(validatePostal('ab', 't')).toBe(true);
+      expect(validatePostal('AB', 'T')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validateCaPostalCodes('AB', 'S')).toBe(false);
+      expect(validatePostal('AB', 'S')).toBe(false);
     });
   });
 
   describe('BC', () => {
     it('valid postal code', () => {
-      expect(validateCaPostalCodes('British Columbia', 'V')).toBe(true);
-      expect(validateCaPostalCodes('bc', 'v')).toBe(true);
-      expect(validateCaPostalCodes('BC', 'V')).toBe(true);
+      expect(validatePostal('British Columbia', 'V')).toBe(true);
+      expect(validatePostal('bc', 'v')).toBe(true);
+      expect(validatePostal('BC', 'V')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validateCaPostalCodes('BC', 'S')).toBe(false);
+      expect(validatePostal('BC', 'S')).toBe(false);
     });
   });
 
   describe('MB', () => {
     it('valid postal code', () => {
-      expect(validateCaPostalCodes('Manitoba', 'R')).toBe(true);
-      expect(validateCaPostalCodes('mb', 'r')).toBe(true);
-      expect(validateCaPostalCodes('MB', 'R')).toBe(true);
+      expect(validatePostal('Manitoba', 'R')).toBe(true);
+      expect(validatePostal('mb', 'r')).toBe(true);
+      expect(validatePostal('MB', 'R')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validateCaPostalCodes('MB', 'S')).toBe(false);
+      expect(validatePostal('MB', 'S')).toBe(false);
     });
   });
 
   describe('NB', () => {
     it('valid postal code', () => {
-      expect(validateCaPostalCodes('New Brunswick', 'E')).toBe(true);
-      expect(validateCaPostalCodes('nb', 'e')).toBe(true);
-      expect(validateCaPostalCodes('NB', 'E')).toBe(true);
+      expect(validatePostal('New Brunswick', 'E')).toBe(true);
+      expect(validatePostal('nb', 'e')).toBe(true);
+      expect(validatePostal('NB', 'E')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validateCaPostalCodes('NB', 'S')).toBe(false);
+      expect(validatePostal('NB', 'S')).toBe(false);
     });
   });
 
   describe('NL', () => {
     it('valid postal code', () => {
-      expect(validateCaPostalCodes('Newfoundland', 'A')).toBe(true);
-      expect(validateCaPostalCodes('nl', 'a')).toBe(true);
-      expect(validateCaPostalCodes('NL', 'A')).toBe(true);
+      expect(validatePostal('Newfoundland', 'A')).toBe(true);
+      expect(validatePostal('nl', 'a')).toBe(true);
+      expect(validatePostal('NL', 'A')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validateCaPostalCodes('NL', 'S')).toBe(false);
+      expect(validatePostal('NL', 'S')).toBe(false);
     });
   });
 
   describe('NS', () => {
     it('valid postal code', () => {
-      expect(validateCaPostalCodes('Nova Scotia', 'B')).toBe(true);
-      expect(validateCaPostalCodes('ns', 'b')).toBe(true);
-      expect(validateCaPostalCodes('NS', 'B')).toBe(true);
+      expect(validatePostal('Nova Scotia', 'B')).toBe(true);
+      expect(validatePostal('ns', 'b')).toBe(true);
+      expect(validatePostal('NS', 'B')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validateCaPostalCodes('NS', 'S')).toBe(false);
+      expect(validatePostal('NS', 'S')).toBe(false);
     });
   });
 
   describe('NT', () => {
     it('valid postal code', () => {
-      expect(validateCaPostalCodes('Northwest Territories', 'X')).toBe(true);
-      expect(validateCaPostalCodes('nt', 'x')).toBe(true);
-      expect(validateCaPostalCodes('NT', 'X')).toBe(true);
+      expect(validatePostal('Northwest Territories', 'X')).toBe(true);
+      expect(validatePostal('nt', 'x')).toBe(true);
+      expect(validatePostal('NT', 'X')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validateCaPostalCodes('NT', 'S')).toBe(false);
+      expect(validatePostal('NT', 'S')).toBe(false);
     });
   });
   describe('NU', () => {
     it('valid postal code', () => {
-      expect(validateCaPostalCodes('Nunavut', 'X')).toBe(true);
-      expect(validateCaPostalCodes('nu', 'x')).toBe(true);
-      expect(validateCaPostalCodes('NU', 'X')).toBe(true);
+      expect(validatePostal('Nunavut', 'X')).toBe(true);
+      expect(validatePostal('nu', 'x')).toBe(true);
+      expect(validatePostal('NU', 'X')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validateCaPostalCodes('NU', 'S')).toBe(false);
+      expect(validatePostal('NU', 'S')).toBe(false);
     });
   });
 
   describe('ON', () => {
     it('valid postal code', () => {
-      expect(validateCaPostalCodes('Ontario', 'K')).toBe(true);
-      expect(validateCaPostalCodes('on', 'k')).toBe(true);
-      expect(validateCaPostalCodes('ON', 'K')).toBe(true);
-      expect(validateCaPostalCodes('ON', 'L')).toBe(true);
-      expect(validateCaPostalCodes('ON', 'N')).toBe(true);
-      expect(validateCaPostalCodes('ON', 'M')).toBe(true);
-      expect(validateCaPostalCodes('ON', 'P')).toBe(true);
+      expect(validatePostal('Ontario', 'K')).toBe(true);
+      expect(validatePostal('on', 'k')).toBe(true);
+      expect(validatePostal('ON', 'K')).toBe(true);
+      expect(validatePostal('ON', 'L')).toBe(true);
+      expect(validatePostal('ON', 'N')).toBe(true);
+      expect(validatePostal('ON', 'M')).toBe(true);
+      expect(validatePostal('ON', 'P')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validateCaPostalCodes('ON', 'S')).toBe(false);
+      expect(validatePostal('ON', 'S')).toBe(false);
     });
   });
 
   describe('QC', () => {
     it('valid postal code', () => {
-      expect(validateCaPostalCodes('Quebec', 'G')).toBe(true);
-      expect(validateCaPostalCodes('qc', 'g')).toBe(true);
-      expect(validateCaPostalCodes('QC', 'G')).toBe(true);
-      expect(validateCaPostalCodes('QC', 'H')).toBe(true);
-      expect(validateCaPostalCodes('QC', 'J')).toBe(true);
-      expect(validateCaPostalCodes('QC', 'K')).toBe(true);
+      expect(validatePostal('Quebec', 'G')).toBe(true);
+      expect(validatePostal('qc', 'g')).toBe(true);
+      expect(validatePostal('QC', 'G')).toBe(true);
+      expect(validatePostal('QC', 'H')).toBe(true);
+      expect(validatePostal('QC', 'J')).toBe(true);
+      expect(validatePostal('QC', 'K')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validateCaPostalCodes('QC', 'S')).toBe(false);
+      expect(validatePostal('QC', 'S')).toBe(false);
     });
   });
 
   describe('YT', () => {
     it('valid postal code', () => {
-      expect(validateCaPostalCodes('Yukon', 'Y')).toBe(true);
-      expect(validateCaPostalCodes('yt', 'y')).toBe(true);
-      expect(validateCaPostalCodes('YT', 'Y')).toBe(true);
+      expect(validatePostal('Yukon', 'Y')).toBe(true);
+      expect(validatePostal('yt', 'y')).toBe(true);
+      expect(validatePostal('YT', 'Y')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validateCaPostalCodes('YT', 'S')).toBe(false);
+      expect(validatePostal('YT', 'S')).toBe(false);
     });
   });
   describe('PE', () => {
     it('valid postal code', () => {
-      expect(validateCaPostalCodes('Prince Edward Island', 'C')).toBe(true);
-      expect(validateCaPostalCodes('pe', 'c')).toBe(true);
-      expect(validateCaPostalCodes('PE', 'C')).toBe(true);
+      expect(validatePostal('Prince Edward Island', 'C')).toBe(true);
+      expect(validatePostal('pe', 'c')).toBe(true);
+      expect(validatePostal('PE', 'C')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validateCaPostalCodes('PE', 'S')).toBe(false);
+      expect(validatePostal('PE', 'S')).toBe(false);
     });
   });
 });

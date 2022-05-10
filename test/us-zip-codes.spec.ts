@@ -1,456 +1,456 @@
-import validate from '../src/us-zip-codes';
+import { validateZip } from '../src/zip-postal-codes';
 
 describe('USA postal code', () => {
   describe('AL', () => {
     it('should validate zip code', () => {
-      expect(validate('al', 35004)).toBe(true);
-      expect(validate('AL', '35005')).toBe(true);
-      expect(validate('al', '35005')).toBe(true);
-      expect(validate('AL', '35004')).toBe(true);
-      expect(validate('alabama', '35003')).toBe(false);
-      expect(validate('AL', '36926')).toBe(false);
+      expect(validateZip('al', 35004)).toBe(true);
+      expect(validateZip('AL', '35005')).toBe(true);
+      expect(validateZip('al', '35005')).toBe(true);
+      expect(validateZip('AL', '35004')).toBe(true);
+      expect(validateZip('alabama', '35003')).toBe(false);
+      expect(validateZip('AL', '36926')).toBe(false);
     });
   });
   describe('AK', () => {
     it('should validate zip code', () => {
-      expect(validate('alaska', '99504')).toBe(true);
-      expect(validate('ak', '99505')).toBe(true);
-      expect(validate('AK', '99504')).toBe(true);
-      expect(validate('alaska', '99960')).toBe(false);
-      expect(validate('AK', '99950')).toBe(true);
-      expect(validate('AK', '99951')).toBe(false);
+      expect(validateZip('alaska', '99504')).toBe(true);
+      expect(validateZip('ak', '99505')).toBe(true);
+      expect(validateZip('AK', '99504')).toBe(true);
+      expect(validateZip('alaska', '99960')).toBe(false);
+      expect(validateZip('AK', '99950')).toBe(true);
+      expect(validateZip('AK', '99951')).toBe(false);
     });
   });
   describe('AZ', () => {
     it('should validate zip code', () => {
-      expect(validate('arizona', '85201')).toBe(true);
-      expect(validate('az', '85202')).toBe(true);
-      expect(validate('AZ', '85201')).toBe(true);
-      expect(validate('arizona', '86557')).toBe(false);
-      expect(validate('AZ', '85000')).toBe(false);
+      expect(validateZip('arizona', '85201')).toBe(true);
+      expect(validateZip('az', '85202')).toBe(true);
+      expect(validateZip('AZ', '85201')).toBe(true);
+      expect(validateZip('arizona', '86557')).toBe(false);
+      expect(validateZip('AZ', '85000')).toBe(false);
     });
   });
   describe('AR', () => {
     it('should validate zip code', () => {
-      expect(validate('arkansas', '72401')).toBe(true);
-      expect(validate('ar', '72402')).toBe(true);
-      expect(validate('AR', '72401')).toBe(true);
-      expect(validate('arkansas', '71400')).toBe(false);
-      expect(validate('AR', '73400')).toBe(false);
+      expect(validateZip('arkansas', '72401')).toBe(true);
+      expect(validateZip('ar', '72402')).toBe(true);
+      expect(validateZip('AR', '72401')).toBe(true);
+      expect(validateZip('arkansas', '71400')).toBe(false);
+      expect(validateZip('AR', '73400')).toBe(false);
     });
   });
   describe('CA', () => {
     it('should validate zip code', () => {
-      expect(validate('california', '90002')).toBe(true);
-      expect(validate('ca', '90003')).toBe(true);
-      expect(validate('CA', '90002')).toBe(true);
-      expect(validate('california', '90000')).toBe(false);
-      expect(validate('CA', '96240')).toBe(false);
+      expect(validateZip('california', '90002')).toBe(true);
+      expect(validateZip('ca', '90003')).toBe(true);
+      expect(validateZip('CA', '90002')).toBe(true);
+      expect(validateZip('california', '90000')).toBe(false);
+      expect(validateZip('CA', '96240')).toBe(false);
     });
   });
   describe('CO', () => {
     it('should validate zip code', () => {
-      expect(validate('colorado', '80201')).toBe(true);
-      expect(validate('co', '80202')).toBe(true);
-      expect(validate('CO', '80201')).toBe(true);
-      expect(validate('colorado', '82200')).toBe(false);
-      expect(validate('CO', '80000')).toBe(false);
+      expect(validateZip('colorado', '80201')).toBe(true);
+      expect(validateZip('co', '80202')).toBe(true);
+      expect(validateZip('CO', '80201')).toBe(true);
+      expect(validateZip('colorado', '82200')).toBe(false);
+      expect(validateZip('CO', '80000')).toBe(false);
     });
   });
   describe('CT', () => {
     it('should validate zip code', () => {
-      expect(validate('connecticut', '6001')).toBe(true);
-      expect(validate('ct', '6002')).toBe(true);
-      expect(validate('CT', '6001')).toBe(true);
-      expect(validate('connecticut', '6000')).toBe(false);
-      expect(validate('CT', '6937')).toBe(false);
+      expect(validateZip('connecticut', '6001')).toBe(true);
+      expect(validateZip('ct', '6002')).toBe(true);
+      expect(validateZip('CT', '6001')).toBe(true);
+      expect(validateZip('connecticut', '6000')).toBe(false);
+      expect(validateZip('CT', '6937')).toBe(false);
     });
   });
   describe('DE', () => {
     it('should validate zip code', () => {
-      expect(validate('delaware', '19901')).toBe(true);
-      expect(validate('de', '19902')).toBe(true);
-      expect(validate('DE', '19901')).toBe(true);
-      expect(validate('delaware', '19700')).toBe(false);
-      expect(validate('DE', '19990')).toBe(false);
+      expect(validateZip('delaware', '19901')).toBe(true);
+      expect(validateZip('de', '19902')).toBe(true);
+      expect(validateZip('DE', '19901')).toBe(true);
+      expect(validateZip('delaware', '19700')).toBe(false);
+      expect(validateZip('DE', '19990')).toBe(false);
     });
   });
   describe('FL', () => {
     it('should validate zip code', () => {
-      expect(validate('florida', '33001')).toBe(true);
-      expect(validate('fl', '33002')).toBe(true);
-      expect(validate('FL', '33001')).toBe(true);
-      expect(validate('florida', '32000')).toBe(false);
-      expect(validate('FL', '35000')).toBe(false);
+      expect(validateZip('florida', '33001')).toBe(true);
+      expect(validateZip('fl', '33002')).toBe(true);
+      expect(validateZip('FL', '33001')).toBe(true);
+      expect(validateZip('florida', '32000')).toBe(false);
+      expect(validateZip('FL', '35000')).toBe(false);
     });
   });
   describe('GA', () => {
     it('should validate zip code', () => {
-      expect(validate('ga', '33001')).toBe(true);
-      expect(validate('ga', '30302')).toBe(true);
-      expect(validate('GA', '30301')).toBe(true);
-      expect(validate('georgia', '30000')).toBe(false);
-      expect(validate('GA', '40000')).toBe(false);
+      expect(validateZip('ga', '33001')).toBe(true);
+      expect(validateZip('ga', '30302')).toBe(true);
+      expect(validateZip('GA', '30301')).toBe(true);
+      expect(validateZip('georgia', '30000')).toBe(false);
+      expect(validateZip('GA', '40000')).toBe(false);
     });
   });
   describe('HI', () => {
     it('should validate zip code', () => {
-      expect(validate('hawaii', '96800')).toBe(true);
-      expect(validate('hi', '96702')).toBe(true);
-      expect(validate('HI', '96701')).toBe(true);
-      expect(validate('hawaii', '96000')).toBe(false);
-      expect(validate('HI', '97700')).toBe(false);
+      expect(validateZip('hawaii', '96800')).toBe(true);
+      expect(validateZip('hi', '96702')).toBe(true);
+      expect(validateZip('HI', '96701')).toBe(true);
+      expect(validateZip('hawaii', '96000')).toBe(false);
+      expect(validateZip('HI', '97700')).toBe(false);
     });
   });
   describe('ID', () => {
     it('should validate zip code', () => {
-      expect(validate('idaho', '83401')).toBe(true);
-      expect(validate('id', '83402')).toBe(true);
-      expect(validate('ID', '83401')).toBe(true);
-      expect(validate('idaho', '83000')).toBe(false);
-      expect(validate('ID', '84000')).toBe(false);
+      expect(validateZip('idaho', '83401')).toBe(true);
+      expect(validateZip('id', '83402')).toBe(true);
+      expect(validateZip('ID', '83401')).toBe(true);
+      expect(validateZip('idaho', '83000')).toBe(false);
+      expect(validateZip('ID', '84000')).toBe(false);
     });
   });
   describe('IL', () => {
     it('should validate zip code', () => {
-      expect(validate('illinois', '62401')).toBe(true);
-      expect(validate('il', '62402')).toBe(true);
-      expect(validate('IL', '62401')).toBe(true);
-      expect(validate('illinois', '60000')).toBe(false);
-      expect(validate('IL', '63000')).toBe(false);
+      expect(validateZip('illinois', '62401')).toBe(true);
+      expect(validateZip('il', '62402')).toBe(true);
+      expect(validateZip('IL', '62401')).toBe(true);
+      expect(validateZip('illinois', '60000')).toBe(false);
+      expect(validateZip('IL', '63000')).toBe(false);
     });
   });
   describe('IN', () => {
     it('should validate zip code', () => {
-      expect(validate('indiana', '46201')).toBe(true);
-      expect(validate('ind', '46202')).toBe(true);
-      expect(validate('IND', '46201')).toBe(true);
-      expect(validate('indiana', '46000')).toBe(false);
-      expect(validate('IND', '48000')).toBe(false);
+      expect(validateZip('indiana', '46201')).toBe(true);
+      expect(validateZip('ind', '46202')).toBe(true);
+      expect(validateZip('IND', '46201')).toBe(true);
+      expect(validateZip('indiana', '46000')).toBe(false);
+      expect(validateZip('IND', '48000')).toBe(false);
     });
   });
   describe('IA', () => {
     it('should validate zip code', () => {
-      expect(validate('iowa', '50101')).toBe(true);
-      expect(validate('ia', '50102')).toBe(true);
-      expect(validate('IA', '50101')).toBe(true);
-      expect(validate('iowa', '50000')).toBe(false);
-      expect(validate('IA', '52900')).toBe(false);
+      expect(validateZip('iowa', '50101')).toBe(true);
+      expect(validateZip('ia', '50102')).toBe(true);
+      expect(validateZip('IA', '50101')).toBe(true);
+      expect(validateZip('iowa', '50000')).toBe(false);
+      expect(validateZip('IA', '52900')).toBe(false);
     });
   });
   describe('KS', () => {
     it('should validate zip code', () => {
-      expect(validate('kansas', '66201')).toBe(true);
-      expect(validate('ks', '66202')).toBe(true);
-      expect(validate('KS', '66201')).toBe(true);
-      expect(validate('kansas', '66000')).toBe(false);
-      expect(validate('KS', '68900')).toBe(false);
+      expect(validateZip('kansas', '66201')).toBe(true);
+      expect(validateZip('ks', '66202')).toBe(true);
+      expect(validateZip('KS', '66201')).toBe(true);
+      expect(validateZip('kansas', '66000')).toBe(false);
+      expect(validateZip('KS', '68900')).toBe(false);
     });
   });
   describe('KY', () => {
     it('should validate zip code', () => {
-      expect(validate('kentucky', '40201')).toBe(true);
-      expect(validate('ky', '40202')).toBe(true);
-      expect(validate('KY', '40201')).toBe(true);
-      expect(validate('kentucky', '40000')).toBe(false);
-      expect(validate('KY', '43100')).toBe(false);
+      expect(validateZip('kentucky', '40201')).toBe(true);
+      expect(validateZip('ky', '40202')).toBe(true);
+      expect(validateZip('KY', '40201')).toBe(true);
+      expect(validateZip('kentucky', '40000')).toBe(false);
+      expect(validateZip('KY', '43100')).toBe(false);
     });
   });
   describe('LA', () => {
     it('should validate zip code', () => {
-      expect(validate('louisiana', '70101')).toBe(true);
-      expect(validate('la', '70102')).toBe(true);
-      expect(validate('LA', '70101')).toBe(true);
-      expect(validate('louisiana', '70000')).toBe(false);
-      expect(validate('LA', '72100')).toBe(false);
+      expect(validateZip('louisiana', '70101')).toBe(true);
+      expect(validateZip('la', '70102')).toBe(true);
+      expect(validateZip('LA', '70101')).toBe(true);
+      expect(validateZip('louisiana', '70000')).toBe(false);
+      expect(validateZip('LA', '72100')).toBe(false);
     });
   });
   describe('ME', () => {
     it('should validate zip code', () => {
-      expect(validate('maine', '4001')).toBe(true);
-      expect(validate('me', '4002')).toBe(true);
-      expect(validate('ME', '4001')).toBe(true);
-      expect(validate('maine', '1000')).toBe(false);
-      expect(validate('ME', '6000')).toBe(false);
+      expect(validateZip('maine', '4001')).toBe(true);
+      expect(validateZip('me', '4002')).toBe(true);
+      expect(validateZip('ME', '4001')).toBe(true);
+      expect(validateZip('maine', '1000')).toBe(false);
+      expect(validateZip('ME', '6000')).toBe(false);
     });
   });
   describe('MD', () => {
     it('should validate zip code', () => {
-      expect(validate('maryland', '21201')).toBe(true);
-      expect(validate('md', '21202')).toBe(true);
-      expect(validate('MD', '21201')).toBe(true);
-      expect(validate('maryland', '20000')).toBe(false);
-      expect(validate('MD', '22000')).toBe(false);
+      expect(validateZip('maryland', '21201')).toBe(true);
+      expect(validateZip('md', '21202')).toBe(true);
+      expect(validateZip('MD', '21201')).toBe(true);
+      expect(validateZip('maryland', '20000')).toBe(false);
+      expect(validateZip('MD', '22000')).toBe(false);
     });
   });
   describe('MA', () => {
     it('should validate zip code', () => {
-      expect(validate('massachusetts', '1001')).toBe(true);
-      expect(validate('ma', '1002')).toBe(true);
-      expect(validate('MA', '1001')).toBe(true);
-      expect(validate('massachusetts', '900')).toBe(false);
-      expect(validate('MA', '7000')).toBe(false);
+      expect(validateZip('massachusetts', '1001')).toBe(true);
+      expect(validateZip('ma', '1002')).toBe(true);
+      expect(validateZip('MA', '1001')).toBe(true);
+      expect(validateZip('massachusetts', '900')).toBe(false);
+      expect(validateZip('MA', '7000')).toBe(false);
     });
   });
   describe('MI', () => {
     it('should validate zip code', () => {
-      expect(validate('michigan', '48201')).toBe(true);
-      expect(validate('mi', '48202')).toBe(true);
-      expect(validate('MI', '48201')).toBe(true);
-      expect(validate('michigan', '48000')).toBe(false);
-      expect(validate('MI', '59000')).toBe(false);
+      expect(validateZip('michigan', '48201')).toBe(true);
+      expect(validateZip('mi', '48202')).toBe(true);
+      expect(validateZip('MI', '48201')).toBe(true);
+      expect(validateZip('michigan', '48000')).toBe(false);
+      expect(validateZip('MI', '59000')).toBe(false);
     });
   });
   describe('MN', () => {
     it('should validate zip code', () => {
-      expect(validate('minnesota', '55001')).toBe(true);
-      expect(validate('mn', '55002')).toBe(true);
-      expect(validate('MN', '55001')).toBe(true);
-      expect(validate('minnesota', '50000')).toBe(false);
-      expect(validate('MN', '57000')).toBe(false);
+      expect(validateZip('minnesota', '55001')).toBe(true);
+      expect(validateZip('mn', '55002')).toBe(true);
+      expect(validateZip('MN', '55001')).toBe(true);
+      expect(validateZip('minnesota', '50000')).toBe(false);
+      expect(validateZip('MN', '57000')).toBe(false);
     });
   });
   describe('MS', () => {
     it('should validate zip code', () => {
-      expect(validate('mississippi', '38601')).toBe(true);
-      expect(validate('ms', '38602')).toBe(true);
-      expect(validate('MS', '38601')).toBe(true);
-      expect(validate('mississippi', '38000')).toBe(false);
-      expect(validate('MS', '42345')).toBe(false);
+      expect(validateZip('mississippi', '38601')).toBe(true);
+      expect(validateZip('ms', '38602')).toBe(true);
+      expect(validateZip('MS', '38601')).toBe(true);
+      expect(validateZip('mississippi', '38000')).toBe(false);
+      expect(validateZip('MS', '42345')).toBe(false);
     });
   });
   describe('MO', () => {
     it('should validate zip code', () => {
-      expect(validate('missouri', '63001')).toBe(true);
-      expect(validate('mo', '63002')).toBe(true);
-      expect(validate('MO', '63001')).toBe(true);
-      expect(validate('missouri', '62000')).toBe(false);
-      expect(validate('MO', '66000')).toBe(false);
+      expect(validateZip('missouri', '63001')).toBe(true);
+      expect(validateZip('mo', '63002')).toBe(true);
+      expect(validateZip('MO', '63001')).toBe(true);
+      expect(validateZip('missouri', '62000')).toBe(false);
+      expect(validateZip('MO', '66000')).toBe(false);
     });
   });
   describe('MT', () => {
     it('should validate zip code', () => {
-      expect(validate('mt', '59937')).toBe(true);
-      expect(validate('MT', '59937')).toBe(true);
-      expect(validate('montana', '59001')).toBe(true);
-      expect(validate('MT', '65433')).toBe(false);
-      expect(validate('montana', '59000')).toBe(false);
+      expect(validateZip('mt', '59937')).toBe(true);
+      expect(validateZip('MT', '59937')).toBe(true);
+      expect(validateZip('montana', '59001')).toBe(true);
+      expect(validateZip('MT', '65433')).toBe(false);
+      expect(validateZip('montana', '59000')).toBe(false);
     });
   });
   describe('NE', () => {
     it('should validate zip code', () => {
-      expect(validate('nebraska', '68001')).toBe(true);
-      expect(validate('ne', '68002')).toBe(true);
-      expect(validate('NE', '68001')).toBe(true);
-      expect(validate('nebraska', '68000')).toBe(false);
-      expect(validate('NE', '70000')).toBe(false);
+      expect(validateZip('nebraska', '68001')).toBe(true);
+      expect(validateZip('ne', '68002')).toBe(true);
+      expect(validateZip('NE', '68001')).toBe(true);
+      expect(validateZip('nebraska', '68000')).toBe(false);
+      expect(validateZip('NE', '70000')).toBe(false);
     });
   });
   describe('NV', () => {
     it('should validate zip code', () => {
-      expect(validate('nevada', '89001')).toBe(true);
-      expect(validate('nv', '89002')).toBe(true);
-      expect(validate('NV', '89001')).toBe(true);
-      expect(validate('nevada', '88000')).toBe(false);
-      expect(validate('NV', '90000')).toBe(false);
+      expect(validateZip('nevada', '89001')).toBe(true);
+      expect(validateZip('nv', '89002')).toBe(true);
+      expect(validateZip('NV', '89001')).toBe(true);
+      expect(validateZip('nevada', '88000')).toBe(false);
+      expect(validateZip('NV', '90000')).toBe(false);
     });
   });
   describe('NH', () => {
     it('should validate zip code', () => {
-      expect(validate('new hampshire', '3031')).toBe(true);
-      expect(validate('nh', '3232')).toBe(true);
-      expect(validate('NH', '3431')).toBe(true);
-      expect(validate('new hampshire', '3995')).toBe(false);
-      expect(validate('NH', '445d')).toBe(false);
+      expect(validateZip('new hampshire', '3031')).toBe(true);
+      expect(validateZip('nh', '3232')).toBe(true);
+      expect(validateZip('NH', '3431')).toBe(true);
+      expect(validateZip('new hampshire', '3995')).toBe(false);
+      expect(validateZip('NH', '445d')).toBe(false);
     });
   });
   describe('NJ', () => {
     it('should validate zip code', () => {
-      expect(validate('new jersey', '7001')).toBe(true);
-      expect(validate('nj', '7002')).toBe(true);
-      expect(validate('NJ', '7001')).toBe(true);
-      expect(validate('new jersey', '7000')).toBe(false);
-      expect(validate('NJ', '9000')).toBe(false);
+      expect(validateZip('new jersey', '7001')).toBe(true);
+      expect(validateZip('nj', '7002')).toBe(true);
+      expect(validateZip('NJ', '7001')).toBe(true);
+      expect(validateZip('new jersey', '7000')).toBe(false);
+      expect(validateZip('NJ', '9000')).toBe(false);
     });
   });
   describe('NM', () => {
     it('should validate zip code', () => {
-      expect(validate('new mexico', '87001')).toBe(true);
-      expect(validate('nm', '87002')).toBe(true);
-      expect(validate('NM', '87001')).toBe(true);
-      expect(validate('new mexico', '87000')).toBe(false);
-      expect(validate('NM', '88563')).toBe(false);
+      expect(validateZip('new mexico', '87001')).toBe(true);
+      expect(validateZip('nm', '87002')).toBe(true);
+      expect(validateZip('NM', '87001')).toBe(true);
+      expect(validateZip('new mexico', '87000')).toBe(false);
+      expect(validateZip('NM', '88563')).toBe(false);
     });
   });
   describe('NY', () => {
     it('should validate zip code', () => {
-      expect(validate('ny', 14656)).toBe(true);
-      expect(validate('ny', 501)).toBe(true);
-      expect(validate('NY', '1002')).toBe(true);
-      expect(validate('new york', '400')).toBe(false);
-      expect(validate('NY', '23234')).toBe(false);
+      expect(validateZip('ny', 14656)).toBe(true);
+      expect(validateZip('ny', 501)).toBe(true);
+      expect(validateZip('NY', '1002')).toBe(true);
+      expect(validateZip('new york', '400')).toBe(false);
+      expect(validateZip('NY', '23234')).toBe(false);
     });
   });
   describe('NC', () => {
     it('should validate zip code', () => {
-      expect(validate('nc', 28001)).toBe(true);
-      expect(validate('NC', '28002')).toBe(true);
-      expect(validate('north carolina', '28001')).toBe(true);
-      expect(validate('NC', '28999')).toBe(false);
-      expect(validate('north carolina', 26934)).toBe(false);
+      expect(validateZip('nc', 28001)).toBe(true);
+      expect(validateZip('NC', '28002')).toBe(true);
+      expect(validateZip('north carolina', '28001')).toBe(true);
+      expect(validateZip('NC', '28999')).toBe(false);
+      expect(validateZip('north carolina', 26934)).toBe(false);
     });
   });
   describe('ND', () => {
     it('should validate zip code', () => {
-      expect(validate('nd', '58001')).toBe(true);
-      expect(validate('ND', '58002')).toBe(true);
-      expect(validate('north dakota', '58001')).toBe(true);
-      expect(validate('ND', '58999')).toBe(false);
-      expect(validate('north dakota', '58000')).toBe(false);
+      expect(validateZip('nd', '58001')).toBe(true);
+      expect(validateZip('ND', '58002')).toBe(true);
+      expect(validateZip('north dakota', '58001')).toBe(true);
+      expect(validateZip('ND', '58999')).toBe(false);
+      expect(validateZip('north dakota', '58000')).toBe(false);
     });
   });
   describe('OH', () => {
     it('should validate zip code', () => {
-      expect(validate('ohio', '45001')).toBe(true);
-      expect(validate('oh', '45002')).toBe(true);
-      expect(validate('OH', '45001')).toBe(true);
-      expect(validate('ohio', 46778)).toBe(false);
-      expect(validate('OH', '42577')).toBe(false);
+      expect(validateZip('ohio', '45001')).toBe(true);
+      expect(validateZip('oh', '45002')).toBe(true);
+      expect(validateZip('OH', '45001')).toBe(true);
+      expect(validateZip('ohio', 46778)).toBe(false);
+      expect(validateZip('OH', '42577')).toBe(false);
     });
   });
   describe('OK', () => {
     it('should validate zip code', () => {
-      expect(validate('oklahoma', '73001')).toBe(true);
-      expect(validate('ok', '73002')).toBe(true);
-      expect(validate('OK', '73001')).toBe(true);
-      expect(validate('oklahoma', '73000')).toBe(false);
-      expect(validate('OK', '75400')).toBe(false);
+      expect(validateZip('oklahoma', '73001')).toBe(true);
+      expect(validateZip('ok', '73002')).toBe(true);
+      expect(validateZip('OK', '73001')).toBe(true);
+      expect(validateZip('oklahoma', '73000')).toBe(false);
+      expect(validateZip('OK', '75400')).toBe(false);
     });
   });
   describe('OR', () => {
     it('should validate zip code', () => {
-      expect(validate('oregon', '97901')).toBe(true);
-      expect(validate('or', '97902')).toBe(true);
-      expect(validate('OR', '97901')).toBe(true);
-      expect(validate('oregon', '97000')).toBe(false);
-      expect(validate('OR', '98000')).toBe(false);
+      expect(validateZip('oregon', '97901')).toBe(true);
+      expect(validateZip('or', '97902')).toBe(true);
+      expect(validateZip('OR', '97901')).toBe(true);
+      expect(validateZip('oregon', '97000')).toBe(false);
+      expect(validateZip('OR', '98000')).toBe(false);
     });
   });
   describe('PA', () => {
     it('should validate zip code', () => {
-      expect(validate('pennsylvania', '19001')).toBe(true);
-      expect(validate('pa', '19002')).toBe(true);
-      expect(validate('PA', '19001')).toBe(true);
-      expect(validate('pennsylvania', '15000')).toBe(false);
-      expect(validate('PA', '20000')).toBe(false);
+      expect(validateZip('pennsylvania', '19001')).toBe(true);
+      expect(validateZip('pa', '19002')).toBe(true);
+      expect(validateZip('PA', '19001')).toBe(true);
+      expect(validateZip('pennsylvania', '15000')).toBe(false);
+      expect(validateZip('PA', '20000')).toBe(false);
     });
   });
   describe('RI', () => {
     it('should validate zip code', () => {
-      expect(validate('rhode island', '2801')).toBe(true);
-      expect(validate('ri', '2802')).toBe(true);
-      expect(validate('RI', '2801')).toBe(true);
-      expect(validate('rhode island', '2800')).toBe(false);
-      expect(validate('RI', '4456')).toBe(false);
+      expect(validateZip('rhode island', '2801')).toBe(true);
+      expect(validateZip('ri', '2802')).toBe(true);
+      expect(validateZip('RI', '2801')).toBe(true);
+      expect(validateZip('rhode island', '2800')).toBe(false);
+      expect(validateZip('RI', '4456')).toBe(false);
     });
   });
   describe('SC', () => {
     it('should validate zip code', () => {
-      expect(validate('south carolina', '29001')).toBe(true);
-      expect(validate('sc', '29002')).toBe(true);
-      expect(validate('SC', '29001')).toBe(true);
-      expect(validate('south carolina', '29000')).toBe(false);
-      expect(validate('SC', '29999')).toBe(false);
+      expect(validateZip('south carolina', '29001')).toBe(true);
+      expect(validateZip('sc', '29002')).toBe(true);
+      expect(validateZip('SC', '29001')).toBe(true);
+      expect(validateZip('south carolina', '29000')).toBe(false);
+      expect(validateZip('SC', '29999')).toBe(false);
     });
   });
   describe('SD', () => {
     it('should validate zip code', () => {
-      expect(validate('south dakota', '57001')).toBe(true);
-      expect(validate('sd', '57002')).toBe(true);
-      expect(validate('SD', '57001')).toBe(true);
-      expect(validate('south dakota', '57000')).toBe(false);
-      expect(validate('SD', '57999')).toBe(false);
+      expect(validateZip('south dakota', '57001')).toBe(true);
+      expect(validateZip('sd', '57002')).toBe(true);
+      expect(validateZip('SD', '57001')).toBe(true);
+      expect(validateZip('south dakota', '57000')).toBe(false);
+      expect(validateZip('SD', '57999')).toBe(false);
     });
   });
   describe('TN', () => {
     it('should validate zip code', () => {
-      expect(validate('tennessee', '37010')).toBe(true);
-      expect(validate('tn', '37555')).toBe(true);
-      expect(validate('TN', '37056')).toBe(true);
-      expect(validate('tennessee', '37000')).toBe(false);
-      expect(validate('TN', '39999')).toBe(false);
+      expect(validateZip('tennessee', '37010')).toBe(true);
+      expect(validateZip('tn', '37555')).toBe(true);
+      expect(validateZip('TN', '37056')).toBe(true);
+      expect(validateZip('tennessee', '37000')).toBe(false);
+      expect(validateZip('TN', '39999')).toBe(false);
     });
   });
   describe('TX', () => {
     it('should validate zip code', () => {
-      expect(validate('texas', '73301')).toBe(true);
-      expect(validate('tx', '73302')).toBe(true);
-      expect(validate('TX', '73301')).toBe(true);
-      expect(validate('texas', '73000')).toBe(false);
-      expect(validate('TX', '89999')).toBe(false);
+      expect(validateZip('texas', '73301')).toBe(true);
+      expect(validateZip('tx', '73302')).toBe(true);
+      expect(validateZip('TX', '73301')).toBe(true);
+      expect(validateZip('texas', '73000')).toBe(false);
+      expect(validateZip('TX', '89999')).toBe(false);
     });
   });
   describe('UT', () => {
     it('should validate zip code', () => {
-      expect(validate('utah', '84001')).toBe(true);
-      expect(validate('ut', '84002')).toBe(true);
-      expect(validate('UT', '84001')).toBe(true);
-      expect(validate('utah', '84000')).toBe(false);
-      expect(validate('UT', '89999')).toBe(false);
+      expect(validateZip('utah', '84001')).toBe(true);
+      expect(validateZip('ut', '84002')).toBe(true);
+      expect(validateZip('UT', '84001')).toBe(true);
+      expect(validateZip('utah', '84000')).toBe(false);
+      expect(validateZip('UT', '89999')).toBe(false);
     });
   });
   describe('VA', () => {
     it('should validate zip code', () => {
-      expect(validate('virginia', '20101')).toBe(true);
-      expect(validate('va', '22002')).toBe(true);
-      expect(validate('VA', '22001')).toBe(true);
-      expect(validate('virginia', '20000')).toBe(false);
-      expect(validate('VA', '25984')).toBe(false);
+      expect(validateZip('virginia', '20101')).toBe(true);
+      expect(validateZip('va', '22002')).toBe(true);
+      expect(validateZip('VA', '22001')).toBe(true);
+      expect(validateZip('virginia', '20000')).toBe(false);
+      expect(validateZip('VA', '25984')).toBe(false);
     });
   });
   describe('VT', () => {
     it('should validate zip code', () => {
-      expect(validate('vermont', '5701')).toBe(true);
-      expect(validate('vt', '5702')).toBe(true);
-      expect(validate('VT', '5003')).toBe(true);
-      expect(validate('vermont', '5000')).toBe(false);
-      expect(validate('VT', '5999')).toBe(false);
+      expect(validateZip('vermont', '5701')).toBe(true);
+      expect(validateZip('vt', '5702')).toBe(true);
+      expect(validateZip('VT', '5003')).toBe(true);
+      expect(validateZip('vermont', '5000')).toBe(false);
+      expect(validateZip('VT', '5999')).toBe(false);
     });
   });
   describe('WA', () => {
     it('should validate zip code', () => {
-      expect(validate('washington', '98001')).toBe(true);
-      expect(validate('wa', '98002')).toBe(true);
-      expect(validate('WA', '98001')).toBe(true);
-      expect(validate('washington', '98000')).toBe(false);
-      expect(validate('WA', '99999')).toBe(false);
+      expect(validateZip('washington', '98001')).toBe(true);
+      expect(validateZip('wa', '98002')).toBe(true);
+      expect(validateZip('WA', '98001')).toBe(true);
+      expect(validateZip('washington', '98000')).toBe(false);
+      expect(validateZip('WA', '99999')).toBe(false);
     });
   });
   describe('WV', () => {
     it('should validate zip code', () => {
-      expect(validate('west virginia', '25001')).toBe(true);
-      expect(validate('wv', '25002')).toBe(true);
-      expect(validate('WV', '25001')).toBe(true);
-      expect(validate('west virginia', '24000')).toBe(false);
-      expect(validate('WV', '27889')).toBe(false);
+      expect(validateZip('west virginia', '25001')).toBe(true);
+      expect(validateZip('wv', '25002')).toBe(true);
+      expect(validateZip('WV', '25001')).toBe(true);
+      expect(validateZip('west virginia', '24000')).toBe(false);
+      expect(validateZip('WV', '27889')).toBe(false);
     });
   });
   describe('WI', () => {
     it('should validate zip code', () => {
-      expect(validate('wisconsin', '53001')).toBe(true);
-      expect(validate('wi', '53002')).toBe(true);
-      expect(validate('WI', '53001')).toBe(true);
-      expect(validate('wisconsin', '53000')).toBe(false);
-      expect(validate('WI', '59999')).toBe(false);
+      expect(validateZip('wisconsin', '53001')).toBe(true);
+      expect(validateZip('wi', '53002')).toBe(true);
+      expect(validateZip('WI', '53001')).toBe(true);
+      expect(validateZip('wisconsin', '53000')).toBe(false);
+      expect(validateZip('WI', '59999')).toBe(false);
     });
   });
   describe('WY', () => {
     it('should validate zip code', () => {
-      expect(validate('wyoming', '82201')).toBe(true);
-      expect(validate('wy', '82202')).toBe(true);
-      expect(validate('WY', '82201')).toBe(true);
-      expect(validate('wyoming', '82000')).toBe(false);
-      expect(validate('WY', '89999')).toBe(false);
+      expect(validateZip('wyoming', '82201')).toBe(true);
+      expect(validateZip('wy', '82202')).toBe(true);
+      expect(validateZip('WY', '82201')).toBe(true);
+      expect(validateZip('wyoming', '82000')).toBe(false);
+      expect(validateZip('WY', '89999')).toBe(false);
     });
   });
 });
