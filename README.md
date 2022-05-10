@@ -8,24 +8,24 @@ Library for validating Canadian Postal Codes and US Zip Codes
 
 ```javascript
 1. CA
-> import { validateCaPostalCodes } from 'zip-postal-codes/src';
-<strong> Province </strong>: could be the first 2 letters or the the full name of the province
+> import { isValidateCaPostalCodes } from 'zip-postal-codes/src';
+<strong> Province </strong>: should be the first 2 letters or the the full name of the province
 <strong> Postal Code </strong>: only the first letter 
-validateCaPostalCodes(province: string, postalCode: string); 
-validateCaPostalCodes('Alberta', 'T'); // true
-validateCaPostalCodes('Manitoba', 'R'); // true
-validateCaPostalCodes('NB', 'S'); // false
+    isValidateCaPostalCodes(province: string, postalCode: string); 
+    isValidateCaPostalCodes('Alberta', 'T'); // true
+    isValidateCaPostalCodes('Manitoba', 'R'); // true
+    isValidateCaPostalCodes('NB', 'S'); // false
 ```
 
 ```javascript
 2. US
 
-> import { validateUsPostalCodes } from 'zip-postal-codes/src';
-<strong> State </strong>: could be the first 2 letters or the full name of the state
-<strong> Zip Code </strong>: could be 5 digit of the state as string or number
-validateUsPostalCodes('colorado', '80201'); // true
-validateUsPostalCodes('DE', 19901); // true 
-validateUsPostalCodes('LA', '72100'); // false
+> import { isValidateUsPostalCodes } from 'zip-postal-codes/src';
+<strong> State </strong>: should be the first 2 letters or the full name of the state
+<strong> Zip Code </strong>: should be 5 digit of the state as string or number
+    isValidateUsPostalCodes('colorado', '80201'); // true
+    isValidateUsPostalCodes('DE', 19901); // true 
+    isValidateUsPostalCodes('LA', '72100'); // false
 ```
 # build
 
