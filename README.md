@@ -18,7 +18,6 @@ Postal Code: only the first letter
 
 
 2. Validate US Zip Code
-
 `import { validateZip } from 'zip-postal-codes/src'`;
 State: should be the first 2 letters or the full name of the state
 Zip Code : should be 5 digit of the state as string or number
