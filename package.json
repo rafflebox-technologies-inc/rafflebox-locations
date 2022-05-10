@@ -1,6 +1,6 @@
 {
   "name": "zip-postal-codes",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "description": "Library for validating Canadian Postal Codes and US Zip Codes",
   "repository": "git@github.com:rafflebox-technologies-inc/zip-postal-codes.git",
