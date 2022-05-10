@@ -1,14 +1,14 @@
 {
   "name": "zip-postal-codes",
-  "version": "1.2.0",
-  "main": "build/index",
-  "types": "build/index.d.ts",
+  "version": "1.2.2",
+  "main": "lib/index",
+  "types": "lib/index.d.ts",
   "description": "Library for validating Canadian Postal Codes and US Zip Codes",
   "repository": "git@github.com:rafflebox-technologies-inc/zip-postal-codes.git",
   "author": "Rafflebox Technologies Inc",
   "license": "ISC",
   "files": [
-    "build/**/*"
+    "lib/**/*"
   ],
   "private": false,
   "engines": {
