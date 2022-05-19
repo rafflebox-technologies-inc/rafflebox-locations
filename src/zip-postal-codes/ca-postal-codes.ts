@@ -1,5 +1,7 @@
-interface PostalCode {
-  [province: string]: string | string[];
+export type ProvinceCodes = 'AB' | 'BC' | 'MB' | 'NB' | 'NL' | 'NS' | 'NT' | 'NU' | 'ON' | 'PE' | 'QC' | 'SK' | 'YT';
+
+type PostalCodePrefix = {
+  [province in ProvinceCodes] : string | string[];
 }
 
 const ab = 'T';
@@ -16,37 +18,24 @@ const sk = 'S';
 const yt = 'Y';
 const pe = 'C';
 
-const postalCodes: PostalCode = {
-  ab: ab,
-  bc: bc,
-  mb: mb,
-  nb: nb,
-  nl: nl,
-  ns: ns,
-  nt: nt,
-  nu: nu,
-  on: on,
-  qc: qc,
-  sk: sk,
-  yt: yt,
-  pe: pe,
-  alberta: ab,
-  'british columbia': bc,
-  manitoba: mb,
-  'new brunswick': nb,
-  newfoundland: nl,
-  'nova scotia': ns,
-  'northwest territories': nt,
-  nunavut: nu,
-  ontario: on,
-  quebec: qc,
-  saskatchewan: sk,
-  yukon: yt,
-  'prince edward island': pe,
+const postalCodes: PostalCodePrefix = {
+  AB: ab,
+  BC: bc,
+  MB: mb,
+  NB: nb,
+  NL: nl,
+  NS: ns,
+  NT: nt,
+  NU: nu,
+  ON: on,
+  QC: qc,
+  SK: sk,
+  YT: yt,
+  PE: pe,
 };
 
-const validatePostal = (province: string, postal: string): boolean => {
-  const prefix = postalCodes[province.toLowerCase()];
+const validatePostal = (province: ProvinceCodes, postal: string): boolean => {
+  const prefix = postalCodes[province];
 
   if (prefix) {
     if (typeof prefix === 'string') {
