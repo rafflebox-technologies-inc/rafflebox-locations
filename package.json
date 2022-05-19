@@ -1,15 +1,12 @@
 {
-  "name": "zip-postal-codes",
+  "name": "rafflebox-locations",
   "version": "1.2.2",
-  "main": "lib/index",
-  "types": "lib/index.d.ts",
+  "main": "index",
+  "types": "index.d.ts",
   "description": "Library for validating Canadian Postal Codes and US Zip Codes",
-  "repository": "git@github.com:rafflebox-technologies-inc/zip-postal-codes.git",
+  "repository": "git@github.com:rafflebox-technologies-inc/rafflebox-locations.git",
   "author": "Rafflebox Technologies Inc",
-  "license": "ISC",
-  "files": [
-    "lib/**/*"
-  ],
+  "license": "MIT",
   "private": false,
   "engines": {
     "node": "^14 || ^16"
@@ -18,10 +15,12 @@
     "test": "jest --verbose --detectOpenHandles --config=jest.config.js",
     "build": "tsc",
     "lint": "eslint \"**/*.{ts,js}\"",
-    "format": "prettier --write \"**/*.{ts,js,json,md}\"",
-    "format:check": "prettier --debug-check \"**/*.{ts,js,json,md}\""
+    "format": "prettier --write \"**/*.{ts,js,json,md,yml}\"",
+    "format:check": "prettier --debug-check \"**/*.{ts,js,json,md}\"",
+    "pre-publish": "cp package.json build && cp README.md build"
   },
   "devDependencies": {
+    "@rafflebox-technologies-inc/rafflebox-prettier-config": "^1.0.1",
     "@types/jest": "^27.5.0",
     "eslint": "^7.0.0",
     "eslint-config-rafflebox": "~0.2.0",
