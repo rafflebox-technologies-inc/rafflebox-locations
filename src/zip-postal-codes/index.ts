@@ -1,4 +1,4 @@
-import validatePostal from './ca-postal-codes';
-import validateZip from './us-zip-codes';
+import validatePostal, { ProvinceCode } from './ca-postal-codes';
+import validateZip, { StateCode } from './us-zip-codes';
 
-export { validatePostal, validateZip };
+export { validatePostal, validateZip, ProvinceCode, StateCode };
