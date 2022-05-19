@@ -1,10 +1,12 @@
-interface Country {
-  [country: string]: string | string[];
-}
+export type Country = 'US' | 'CA';
 
-const country: Country = {
+export type CountryMap = {
+  [country in Country]: string | string[];
+};
+
+const countryMap: CountryMap = {
   'CA': 'Canada',
   'US': 'United States',
 }
 
-export default country;
+export default countryMap;

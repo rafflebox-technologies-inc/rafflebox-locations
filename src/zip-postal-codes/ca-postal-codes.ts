@@ -1,7 +1,7 @@
-export type ProvinceCodes = 'AB' | 'BC' | 'MB' | 'NB' | 'NL' | 'NS' | 'NT' | 'NU' | 'ON' | 'PE' | 'QC' | 'SK' | 'YT';
+export type ProvinceCode = 'AB' | 'BC' | 'MB' | 'NB' | 'NL' | 'NS' | 'NT' | 'NU' | 'ON' | 'PE' | 'QC' | 'SK' | 'YT';
 
 type PostalCodePrefix = {
-  [province in ProvinceCodes] : string | string[];
+  [province in ProvinceCode] : string | string[];
 }
 
 const ab = 'T';
@@ -34,7 +34,7 @@ const postalCodes: PostalCodePrefix = {
   PE: pe,
 };
 
-const validatePostal = (province: ProvinceCodes, postal: string): boolean => {
+const validatePostal = (province: ProvinceCode, postal: string): boolean => {
   const prefix = postalCodes[province];
 
   if (prefix) {

@@ -1,3 +1,3 @@
-import country from "./country";
+import countryMap from "./country";
 
-export { country };
+export { countryMap };
