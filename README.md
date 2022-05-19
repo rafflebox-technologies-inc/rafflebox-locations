@@ -24,6 +24,7 @@ Library for validating Canadian Postal Codes and US Zip Codes
    validateZip('DE', 19901); // true
    validateZip('LA', '72100'); // false
    ```
+  
 
 # build
 
