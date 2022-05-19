@@ -1,16 +1,14 @@
-name: Publish
+name: CI
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    branches: [main]
 
 jobs:
-  publish:
-    name: publish
+  build:
+    runs-on: ubuntu-latest
     env:
       NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -28,25 +26,5 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - name: Get Outputs
-        id: vars
-        run: echo "::set-output name=sha_short::$(git rev-parse --short "$GITHUB_SHA")"
-
       - name: yarn install
         run: yarn install --prefer-offline --frozen-lockfile --no-progress --non-interactive
-
-      - name: yarn build
-        run: yarn build
-
-      - name: Publish
-        run: |
-          yarn pre-publish
-          export VERSION=$(jq -r '.version' package.json)
-          yarn publish build --new-version $VERSION
-      - name: Slack
-        run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"text":"Published `rafflebox-locations` to Github - <https://github.com/rafflebox-technologies-inc/rafflebox-locations/commit/${{ steps.vars.outputs.sha_short }}|${{ steps.vars.outputs.sha_short }}>"}' https://hooks.slack.com/services/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
-      - name: Failed
-        if: ${{ failure() }}
-        run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"text":"'"$GITHUB_WORKFLOW"' Failed for `${{ github.event.repository.name }}` - <'"$GITHUB_SERVER_URL"'/'"$GITHUB_REPOSITORY"'/actions/runs/'"$GITHUB_RUN_ID"'|View Run>"}' https://hooks.slack.com/services/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

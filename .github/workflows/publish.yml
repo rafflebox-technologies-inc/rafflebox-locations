@@ -1,3 +1,5 @@
+
+
 name: Publish
 
 on:
@@ -28,16 +30,21 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - name: yarn install
-        run: yarn install --prefer-offline --frozen-lockfile --no-progress --non-interactive
-
       - name: Get Outputs
         id: vars
         run: echo "::set-output name=sha_short::$(git rev-parse --short "$GITHUB_SHA")"
 
+      - name: yarn install
+        run: yarn install --prefer-offline --frozen-lockfile --no-progress --non-interactive
+
+      - name: yarn build
+        run: yarn build
+
       - name: Publish
         run: |
-          npm publish build
+          yarn pre-publish
+          export VERSION=$(jq -r '.version' package.json)
+          yarn publish build --new-version $VERSION
       - name: Slack
         run: |
           curl -X POST -H 'Content-type: application/json' --data '{"text":"Published `rafflebox-locations` to Github - <https://github.com/rafflebox-technologies-inc/rafflebox-locations/commit/${{ steps.vars.outputs.sha_short }}|${{ steps.vars.outputs.sha_short }}>"}' https://hooks.slack.com/services/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
