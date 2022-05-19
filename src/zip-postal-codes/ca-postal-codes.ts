@@ -1,8 +1,8 @@
 export type ProvinceCode = 'AB' | 'BC' | 'MB' | 'NB' | 'NL' | 'NS' | 'NT' | 'NU' | 'ON' | 'PE' | 'QC' | 'SK' | 'YT';
 
 type PostalCodePrefix = {
-  [province in ProvinceCode] : string | string[];
-}
+  [province in ProvinceCode]: string | string[];
+};
 
 const ab = 'T';
 const bc = 'V';

@@ -5,8 +5,8 @@ export type CountryMap = {
 };
 
 const countryMap: CountryMap = {
-  'CA': 'Canada',
-  'US': 'United States',
-}
+  CA: 'Canada',
+  US: 'United States',
+};
 
 export default countryMap;

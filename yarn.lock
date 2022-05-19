@@ -573,6 +573,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@rafflebox-technologies-inc/rafflebox-prettier-config@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.pkg.github.com/download/@rafflebox-technologies-inc/rafflebox-prettier-config/1.0.1/a10b624f8fdaf9a62df5ea3e9ddfb373a3a67fb3c1e5c38a993da1858bef452b#317d528eb93b8fb5ea7a2eed42c42b757036bf56"
+  integrity sha512-Bgn/szRAJpRshpbVwUNncJwtlu8TDEoUph+HAm9OuUYi7rocUxu4eDCvC2rpCcy63mzjtiPHFt8/imrBbGd/CA==
+
 "@sinclair/typebox@^0.23.3":
   version "0.23.5"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.23.5.tgz#93f7b9f4e3285a7a9ade7557d9a8d36809cbc47d"
