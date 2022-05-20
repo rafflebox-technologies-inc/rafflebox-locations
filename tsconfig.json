@@ -5,7 +5,7 @@
     "strictPropertyInitialization": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "esnext",
+    "module": "commonjs",
     "esModuleInterop": true,
     "target": "es2020",
     "noImplicitAny": true,
