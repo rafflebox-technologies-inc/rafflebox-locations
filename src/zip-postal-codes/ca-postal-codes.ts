@@ -34,9 +34,17 @@ const postalCodes: PostalCodePrefix = {
   PE: pe,
 };
 
-const validatePostal = (province: ProvinceCode, postal: string): boolean => {
-  const prefix = postalCodes[province];
+function isProvinceCode<T>(key: PropertyKey, obj: T): key is keyof T {
+  return key in obj;
+}
 
+const validatePostal = (province: string, postal: string): boolean => {
+  if(!isProvinceCode(province, postalCodes)) {
+    return false; 
+  }
+
+  const prefix = postalCodes[province];
+  
   if (prefix) {
     if (typeof prefix === 'string') {
       return postal.toLowerCase().startsWith(prefix.toLowerCase());
