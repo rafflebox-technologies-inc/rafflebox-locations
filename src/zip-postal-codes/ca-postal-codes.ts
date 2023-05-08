@@ -11,8 +11,8 @@ const on = ['K', 'L', 'M', 'N', 'P'];
 const nl = 'A';
 const nb = 'E';
 const ns = 'B';
-const nt = 'X';
-const nu = 'X';
+const nt = ['X0E, X0G, X1A'];
+const nu = ['X0A, X0B, X0C'];
 const qc = ['G', 'H', 'J', 'K'];
 const sk = 'S';
 const yt = 'Y';
@@ -39,12 +39,12 @@ function isProvinceCode<T>(key: PropertyKey, obj: T): key is keyof T {
 }
 
 const validatePostal = (province: string, postal: string): boolean => {
-  if(!isProvinceCode(province, postalCodes)) {
-    return false; 
+  if (!isProvinceCode(province, postalCodes)) {
+    return false;
   }
 
   const prefix = postalCodes[province];
-  
+
   if (prefix) {
     if (typeof prefix === 'string') {
       return postal.toLowerCase().startsWith(prefix.toLowerCase());
