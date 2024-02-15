@@ -34,7 +34,7 @@ const postalCodes: PostalCodePrefix = {
   PE: pe,
 };
 
-function isProvinceCode<T>(key: PropertyKey, obj: T): key is keyof T {
+function isProvinceCode<T extends object>(key: PropertyKey, obj: T): key is keyof T {
   return key in obj;
 }
 

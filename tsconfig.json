@@ -1,24 +1,11 @@
 {
+  "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
-    "strict": true,
-    "incremental": true,
-    "strictPropertyInitialization": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "target": "es2020",
-    "noImplicitAny": true,
-    "moduleResolution": "node",
     "inlineSourceMap": true,
-    "outDir": "./build",
-    "baseUrl": ".",
-    "typeRoots": ["src/types", "node_modules/@types"],
-    "declaration": true,
-    "paths": {
-      "*": ["node_modules/*"]
-    }
+    "outDir": "build",
+    "baseUrl": "."
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "include": ["src/**/*.ts"]
 }
