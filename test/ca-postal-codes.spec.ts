@@ -69,22 +69,30 @@ describe('canada postal codes', () => {
 
   describe('NT', () => {
     it('valid postal code', () => {
-      expect(validatePostal('NT', 'X')).toBe(true);
-      expect(validatePostal('NT', 'x')).toBe(true);
-      expect(validatePostal('NT', 'X')).toBe(true);
+      expect(validatePostal('NT', 'X0E')).toBe(true);
+      expect(validatePostal('NT', 'X0G')).toBe(true);
+      expect(validatePostal('NT', 'X1A')).toBe(true);
+
+      expect(validatePostal('NT', 'x0e')).toBe(true);
+      expect(validatePostal('NT', 'x0g')).toBe(true);
+      expect(validatePostal('NT', 'x1a')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validatePostal('NT', 'S')).toBe(false);
+      expect(validatePostal('NT', 'x')).toBe(false);
     });
   });
+
   describe('NU', () => {
     it('valid postal code', () => {
-      expect(validatePostal('NU', 'X')).toBe(true);
-      expect(validatePostal('NU', 'x')).toBe(true);
-      expect(validatePostal('NU', 'X')).toBe(true);
+      expect(validatePostal('NU', 'X0A')).toBe(true);
+      expect(validatePostal('NU', 'X0B')).toBe(true);
+      expect(validatePostal('NU', 'X0C')).toBe(true);
+      expect(validatePostal('NU', 'x0a')).toBe(true);
+      expect(validatePostal('NU', 'x0b')).toBe(true);
+      expect(validatePostal('NU', 'x0c')).toBe(true);
     });
     it('invalid postal code', () => {
-      expect(validatePostal('NU', 'S')).toBe(false);
+      expect(validatePostal('NU', 'x')).toBe(false);
     });
   });
 
