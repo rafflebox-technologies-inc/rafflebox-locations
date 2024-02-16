@@ -5,12 +5,9 @@ module.exports = {
     '!<rootDir>/node_modules/',
     '!<rootDir>/*.js',
   ],
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/test/tsconfig.json',
-    },
-  },
-  testTimeout: 60000,
   preset: 'ts-jest',
   testPathIgnorePatterns: ['<rootDir>/config.*.js'],
+  transform: {
+    '^.+\\.ts$': ['ts-jest', {tsconfig: '<rootDir>/test/tsconfig.json'}]
+  }
 };
