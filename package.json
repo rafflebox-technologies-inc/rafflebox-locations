@@ -1,6 +1,6 @@
 {
   "name": "@rafflebox-technologies-inc/rafflebox-locations",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "index",
   "types": "index.d.ts",
   "description": "Library for validating Canadian Postal Codes and US Zip Codes",
